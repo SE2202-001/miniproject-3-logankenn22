@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Analysis</title>
   <style>
+    /* This is the css code that makes the website match the desired appearance and format */
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -20,8 +21,8 @@
       display: flex;
       gap: 15px;
       margin-bottom: 20px;
-      align-items: center; /* Align labels and dropdowns vertically */
-      flex-wrap: wrap; /* Wrap filters to the next line if needed */
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     label {
@@ -31,7 +32,7 @@
     select, button, input[type="file"] {
       padding: 5px;
       font-size: 14px;
-      height: 35px; /* Consistent height for all input elements */
+      height: 35px;
     }
 
     .job-list {
@@ -88,12 +89,12 @@
 
     @media (max-width: 768px) {
       .filters, .sorting {
-        flex-direction: column; /* Stack items vertically on smaller screens */
+        flex-direction: column;
         align-items: flex-start;
       }
 
       select, button, input[type="file"] {
-        width: 100%; /* Full width for better usability on small screens */
+        width: 100%;
       }
     }
   </style>
@@ -103,13 +104,13 @@
     <h1>Job Analysis</h1>
   </div>
 
-  <!-- File Upload -->
+  <!-- HTML code for the File Upload -->
   <div class="filters">
     <label for="jsonFileInput">Upload JSON File:</label>
     <input type="file" id="jsonFileInput" accept=".json">
   </div>
 
-  <!-- Filters -->
+  <!-- HTML code for the Filters -->
   <div class="filters">
     <label for="filterLevel">Filter by Level:</label>
     <select id="filterLevel">
@@ -137,7 +138,7 @@
     <button id="filterBtn">Filter Jobs</button>
   </div>
 
-  <!-- Sorting -->
+  <!-- HTML code for the Sorting -->
   <div class="sorting">
     <label for="sortBy">Sort by:</label>
     <select id="sortBy">
@@ -149,10 +150,10 @@
     <button id="sortBtn">Sort Jobs</button>
   </div>
 
-  <!-- Job List -->
+  <!-- HTML code for the Job List, the .js file will populate this with jobs -->
   <ul id="jobList" class="job-list"></ul>
 
-  <!-- Modal -->
+  <!-- HTML code for the Modal -->
   <div id="modalOverlay" class="modal-overlay"></div>
   <div id="jobModal" class="modal">
     <span class="close-btn" id="closeModalBtn">&times;</span>
@@ -160,6 +161,7 @@
     <p id="modalDetails">Job details will appear here.</p>
   </div>
 
+  <!-- link the .js script to this html page -->
   <script src="JobAnalysis.js"></script>
 </body>
 </html>
